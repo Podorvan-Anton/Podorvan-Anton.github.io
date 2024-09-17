@@ -46,12 +46,12 @@ footer {
     padding-left: 45px;
     margin-left: -50px;
     font-size: 1.1em;
+    position: absolute;
+    width: 100%;
 }
 footer a {
     text-decoration: none;
     color: white;
-    position: absolute;
-    width: 100%;
 }
 img {
     width: 768px;
