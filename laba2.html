@@ -8,6 +8,7 @@
     <script defer src="sources/scripts/load_meals.js"></script>
     <script defer src="sources/scripts/select_meal.js"></script>
     <script defer src="sources/scripts/filter_meals.js"></script>
+    <script defer src="sources/scripts/validate_form.js"></script>
     <link rel="stylesheet" href="style_laba2.css">
     <link rel="stylesheet" href="style_laba1.css">
 </head>
@@ -22,6 +23,88 @@
         </nav>
     </header>
     <main>
+        <div class="combo">
+            <h2>Доступные для заказа комбо</h2>
+            <div class="variants">
+                <div class="variant">
+                    <div class="dish">
+                        <img src="sources/icons/soup.png" alt="image">
+                        <p>Суп</p>
+                    </div>
+                    <div class="dish">
+                        <img src="sources/icons/main.png" alt="image">
+                        <p>Главное блюдо</p>
+                    </div>
+                    <div class="dish">
+                        <img src="sources/icons/salad.png" alt="image">
+                        <p>Салат</p>
+                    </div>
+                    <div class="dish">
+                        <img src="sources/icons/drink.png" alt="image">
+                        <p>Напиток</p>
+                    </div>
+                </div>
+                <div class="variant">
+                    <div class="dish">
+                        <img src="sources/icons/soup.png" alt="image">
+                        <p>Суп</p>
+                    </div>
+                    <div class="dish">
+                        <img src="sources/icons/main.png" alt="image">
+                        <p>Главное блюдо</p>
+                    </div>
+                    <div class="dish">
+                        <img src="sources/icons/drink.png" alt="image">
+                        <p>Напиток</p>
+                    </div>
+                </div>
+                <div class="variant">
+                    <div class="dish">
+                        <img src="sources/icons/soup.png" alt="image">
+                        <p>Суп</p>
+                    </div>
+                    <div class="dish">
+                        <img src="sources/icons/salad.png" alt="image">
+                        <p>Салат</p>
+                    </div>
+                    <div class="dish">
+                        <img src="sources/icons/drink.png" alt="image">
+                        <p>Напиток</p>
+                    </div>
+                </div>
+                <div class="variant">
+                    <div class="dish">
+                        <img src="sources/icons/main.png" alt="image">
+                        <p>Главное блюдо</p>
+                    </div>
+                    <div class="dish">
+                        <img src="sources/icons/salad.png" alt="image">
+                        <p>Салат</p>
+                    </div>
+                    <div class="dish">
+                        <img src="sources/icons/drink.png" alt="image">
+                        <p>Напиток</p>
+                    </div>
+                </div>
+                <div class="variant">
+                    <div class="dish">
+                        <img src="sources/icons/main.png" alt="image">
+                        <p>Главное блюдо</p>
+                    </div>
+                    <div class="dish">
+                        <img src="sources/icons/drink.png" alt="image">
+                        <p>Напиток</p>
+                    </div>
+                </div>
+                <div class="variant">
+                    <div class="dish">
+                        <img src="sources/icons/desert.png" alt="image">
+                        <p>Десерт</p>
+                        <p>(Можно добавить к любому заказу)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <section id="soup">
             <h2>Выберите суп</h2>
             <div class="filters">
@@ -102,7 +185,7 @@
     </main>
     <div class="order">
         <h2>Сделать заказ</h2>
-        <form method="POST" action="https://httpbin.org/post">
+        <form method="POST" action="https://httpbin.org/post" id="form">
             <div class="cl_order">
                 <p>Ваш заказ</p>
                 <div class="nothing_selected">

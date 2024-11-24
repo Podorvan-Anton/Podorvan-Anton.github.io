@@ -46,6 +46,41 @@
     border: none;
     font-size: 1em;
 }
+.combo {
+    padding-top: 32px;
+}
+.combo .variants {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 48px 64px 0 64px;
+}
+.combo h2 {
+    text-align: center;
+}
+.combo .variants .variant {
+    display: flex;
+    justify-content: center;
+}
+.combo .variants .variant .dish {
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+}
+.combo .variants .variant .dish img {
+    height: 96px;
+    object-fit: scale-down;
+}
+.combo .variants .variant .dish img:hover {
+    transform: translateY(-16px) scale(1.1);
+}
+.combo .variants .variant .dish p {
+    text-align: center;
+    margin: 0;
+}
+.combo .variants .variant .dish p:first-of-type + p {
+    font-style: italic;
+    font-size: calc(1em - 2px);
+}
 .filters {
     padding: 24px 4px;
 }
@@ -144,6 +179,35 @@
     font-size: 0.85em;
     padding: 12px 0;
     flex-grow: 1;
+}
+.notification {
+    position: fixed;
+    width: 30%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 24px 48px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 2px solid;
+    text-align: center;
+}
+.notification p {
+    padding: 16px 0;
+}
+.notification button {
+    background-color: white;
+    padding: 16px 32px;
+    margin: auto;
+    width: 35%;
+    border: 2px solid;
+    border-radius: 16px;
+    font-size: 1em;
+}
+.notification button:hover {
+    background-color: black;
+    color: white;
 }
 @media (max-width: 875px) {
     .container {

@@ -14,6 +14,22 @@ function unhighlight(item) {
 
 const sum = [0, 0, 0, 0, 0];
 
+let selected = {
+    soup,
+    main_course,
+    beverages,
+    salad,
+    dessert
+};
+
+let categories = [
+    "soup",
+    "main_course",
+    "beverages",
+    "salad",
+    "dessert"
+];
+
 function select_item(event) {
     hide_prompt();
 
@@ -63,6 +79,7 @@ function select_item(event) {
     sum[0] + sum[1] + sum[2] + sum[3] + sum[4] + "&#8381;";
 
     event.currentTarget.parentNode.classList.add("highlighted");
+    selected[meal.category] = meal.keyword;
 }
 
 let buttons = document.querySelectorAll(".add");

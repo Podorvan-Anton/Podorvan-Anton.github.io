@@ -12,8 +12,11 @@ body {
 header, section {
     padding: 0 80px;
 }
+section {
+    margin-bottom: 48px;
+}
 main {
-    padding-bottom: 48px;
+    padding-bottom: 16px;
     flex-grow: 1;
 }
 h1 {

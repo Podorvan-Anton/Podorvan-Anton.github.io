@@ -14,6 +14,11 @@ function load(category, kind = "any") {
             document.getElementById(category).lastElementChild.append(item);
             document.getElementById(category).lastElementChild.lastElementChild.
                 lastElementChild.addEventListener("click", select_item);
+
+            if (meals[i].keyword == selected[meals[i].category]) {
+                document.getElementById(category).lastElementChild.
+                    lastElementChild.classList.add("highlighted");
+            }
         }
     }
 }
