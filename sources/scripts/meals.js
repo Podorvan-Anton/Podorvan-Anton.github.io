@@ -1,6 +1,22 @@
 "use strict";
 
-const meals = [
+let meals;
+
+function loadDishes() {
+    let xhr = new XMLHttpRequest();
+
+    xhr.open("GET", "https://edu.std-900.ist.mospolytech.ru/labs/api/dishes", 
+        false);
+    xhr.onload = () => {
+        meals = JSON.parse(xhr.response);
+    };
+    xhr.send();
+}
+
+
+loadDishes();
+
+/*const meals = [
     {
         keyword: "gaspacho",
         name: "Гаспачо",
@@ -271,4 +287,4 @@ const meals = [
         image: "sources/menu/desserts/donuts.jpg",
         kind: "l_portion"
     }
-];
+];*/

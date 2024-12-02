@@ -11,6 +11,12 @@ function compareMeals(a, b) {
 meals.sort(compareMeals);
 
 for (let i = 0; i < meals.length; i++) {
+    if (meals[i].category == "main-course") {
+        meals[i].category = "main_course";
+    } else if (meals[i].category == "drink") {
+        meals[i].category = "beverages";
+    }
+
     let item = document.createElement("div");
     item.className = "item";
     item.innerHTML += `<img src="${meals[i].image}" alt="image">`;
