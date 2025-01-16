@@ -1,0 +1,398 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 2em;
+
+    margin: 0;
+}
+header {
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 48px;
+    
+    background-color: orange;
+}
+header h1 {
+    margin: 0;
+    padding: 16px 32px;
+
+    color: white;
+}
+header .form {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+header .form input {
+    flex-grow: 1;
+
+    font-size: 1em;
+
+    border: 0;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+
+    padding: 8px;
+}
+header .form button {
+    border: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: rgb(222, 222, 222);
+
+    font-size: 1em;
+    
+    margin: 0;
+    padding: 8px 24px;
+}
+header .form button:hover {
+    background-color: rgb(200, 200, 200);;
+}
+header > div {
+    display: flex;
+    align-items: center;
+}
+header > div button {
+    background: none;
+    border: 0;
+    
+    margin: 16px 16px;
+}
+header > div img {
+    height: 64px;
+    filter: invert(100%);
+}
+header > div img:hover {
+    transform: scale(1.1);
+}
+.notification {
+    position: sticky;
+    top: 104px;
+    z-index: 2;
+
+    display: none;
+    justify-content: space-between;
+
+    background-color: rgb(182, 218, 182);
+    border: 2px rgb(92, 162, 92) solid;
+}
+.notification p {
+    margin: 0;
+    padding: 16px 48px;
+}
+.notification button {
+    background: none;
+    border: 0;
+
+    padding: 0;
+    margin: 16px;
+}
+.notification img {
+    height: 32px;
+}
+main {
+    display: flex;
+    flex-grow: 1;
+}
+.sidebar {
+    border-right: 4px gray solid;
+    min-width: 320px;
+    width: 320px;
+    padding: 0 24px;
+}
+.sidebar label {
+    display: inline-block;
+    padding: 8px 0;
+}
+.sidebar [type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    position: fixed;
+}
+.sidebar label > div {
+    display: inline-block;
+    margin-right: 12px;
+
+    width: 24px;
+    height: 24px;
+
+    border: 2px orange solid;
+    border-radius: 4px;
+}
+.sidebar [type="checkbox"]:checked + label > div {
+    background-color: orange;
+}
+.sidebar .price h3 {
+    margin-bottom: 8px;
+}
+.sidebar .price > div > div {
+    display: inline-block;
+    width: 45%;
+    font-size: 0.75em;
+}
+.sidebar .price > div > div input {
+    width: 80%;
+    font-size: 0.75em;
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 48px;
+}
+.sidebar .price p {
+    margin: 8px 0;
+}
+.sidebar .discount p {
+    margin: 0;
+    display: inline-block;
+    margin-left: 32px;
+    width: 85%;
+}
+.sidebar .discount div {
+    margin-right: -20px;
+    margin-bottom: 32px;
+}
+.sidebar form button {
+    background-color: orange;
+    color: white;
+    font-size: 1em;
+    border: 0;
+    border-radius: 16px;
+    padding: 12px 24px;
+    margin: 32px 28px;
+}
+.sidebar form button:hover {
+    background-color: rgb(255, 145, 0);
+}
+.content {
+    flex-grow: 1;
+
+    padding: 0 32px;
+    padding-bottom: 24px;
+}
+.content .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+.content .header h2 {
+    margin: 0;
+    padding: 24px 0;
+}
+.content .header form select {
+    border: 2px lightgray solid;
+    background-color: white;
+
+    margin: 0;
+    padding: 16px;
+
+    font-size: 0.75em;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+}
+.container .item {
+    display: flex;
+    flex-direction: column;
+
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+    background-color: rgb(240, 240, 240);
+    border: 2px rgb(240, 240, 240) solid;
+    border-radius: 32px;
+}
+.container .item img {
+    border-radius: 32px;
+    margin: auto;
+}
+.container .item .img-holder {
+    background-color: white;
+    border-radius: 32px;
+}
+.container .item .img-holder img {
+    width: 100%;
+    max-height: 25vw;
+    display: block;
+    object-fit: contain;
+}
+.container .item .desc {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    padding: 16px;
+}
+.container .item .name {
+    padding: 8px;
+    flex-grow: 1;
+}
+.container .item .name {
+    margin: 0;
+    margin-top: 16px;
+}
+.container .item .name .name-tooltip {
+    visibility: hidden;
+    background-color: rgb(45, 45, 45);
+    color: white;
+    width: 100%;
+
+    font-size: 0.8em;
+    padding: 8px;
+    border-radius: 8px;
+
+    position: absolute;
+    z-index: 1;
+    right: 40%;
+}
+.container .item .rating p {
+    font-size: 0.9em;
+    margin: 16px 8px;
+}
+.container .item .rating > * {
+    display: inline-block;
+}
+.container .item .rating img {
+    width: 32px;
+    transform: translateY(4px);
+}
+.container .item .name:hover .name-tooltip {
+    visibility: visible;
+}
+.container .item .cost {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+}
+.container .item .cost p {
+    margin: 16px 8px;
+}
+.container .item .cost p:nth-child(2) {
+    color: red;
+}
+.container .item .cost p:nth-child(3) {
+    color: red;
+    font-weight: bold;
+}
+.content > div:last-child {
+    display: flex;
+    justify-content: center;
+}
+.content button {
+    width: 100%;
+    background-color: orange;
+    color: white;
+    font-size: 1em;
+    border: 0;
+    border-radius: 16px;
+    padding: 12px 24px;
+}
+.content button:hover {
+    background-color: rgb(255, 145, 0);
+}
+footer {
+    background-color: rgb(45, 45, 45);
+    color: white;
+    text-align: center;
+}
+
+@media (max-width: 1460px){
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .container .item .img-holder img {
+        max-height: 35vw;
+    }
+}
+@media (max-width: 1128px){
+    header {
+        flex-wrap: wrap;
+        gap: 0;
+    }
+    header .form {
+        order: 4;
+        margin: 16px;
+        min-width: 640px;
+    }
+    main {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 4px gray solid;
+    }
+    .sidebar form {
+        display: grid;
+        grid-template-columns: 35% 30% auto;
+    }
+    .sidebar .price h3 {
+        margin-bottom: 40px;
+    }
+    .sidebar form > button {
+        grid-column: span 3;
+    }
+    .sidebar .price > div > div {
+        display: block;
+    }
+    .sidebar .discount {
+        width: 100%;
+        margin-top: 64px;
+    }
+    .notification {
+        top: 189px;
+    }
+    .sidebar .price > div > div {
+        width: 90%;
+    }
+}
+@media (max-width: 796px){
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .container .item .img-holder img {
+        max-height: 92vw;
+    }
+    .sidebar form {
+        grid-template-columns: 51% auto;
+        column-gap: 16px;
+    }
+    .sidebar .discount {
+        grid-column: span 2;
+    }
+    .sidebar form > button {
+        grid-column: span 2;
+    }
+    header .form {
+        min-width: 0;
+    }
+    header .form input {
+        min-width: 256px;
+    }
+    .sidebar .discount {
+        margin-top: 32px;
+    }
+    .sidebar .price > div {
+        padding-left: 32px;
+    }
+    .content .header {
+        flex-wrap: wrap;
+    }
+    .content .header h2 {
+        padding: 0;
+    }
+    .content .header {
+        padding: 24px 0;
+    }
+}

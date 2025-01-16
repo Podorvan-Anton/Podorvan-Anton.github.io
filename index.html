@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAME</title>
+    <script defer src="sources/scripts/content.js"></script>
+    <script defer src="sources/scripts/notifications.js"></script>
+    <link rel="stylesheet" href="sources/styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>NAME</h1>
+        <div class="form">
+            <input type="text" placeholder="Введите запрос"><button id="find">Найти</button>
+        </div>
+        <div>
+            <button id="cart">
+                <img src="sources/images/icons/shopping_cart.png" alt="Корзина">
+            </button>
+            <button id="orders">
+                <img src="sources/images/icons/avatar.png" alt="Личный кабинет">
+            </button>
+        </div>
+    </header>
+    <div class="notification">
+        <p id="note-text">Текст сообщения</p>
+        <button id="close">
+            <img src="sources/images/icons/cross.png" alt="Закрыть">
+        </button>
+    </div>
+    <main>
+        <aside class="sidebar">
+            <form>
+                <div class="category">
+                    <h3>Категории</h3>
+                    <input type="checkbox" id="category1">
+                    <label for="category1"><div></div>Категория 1</label><br>
+                    <input type="checkbox" id="category2">
+                    <label for="category2"><div></div>Категория 2</label><br>
+                    <input type="checkbox" id="category3">
+                    <label for="category3"><div></div>Категория 3</label><br>
+                    <input type="checkbox" id="category4">
+                    <label for="category4"><div></div>Категория 4</label><br>
+                    <input type="checkbox" id="category5">
+                    <label for="category5"><div></div>Категория 5</label>
+                </div>
+                <div class="price">
+                    <h3>Стоимость</h3>
+                    <div>
+                        <div>
+                            <p>От</p>
+                            <input type="number" step="100">
+                        </div>
+                        <div>
+                            <p>До</p>
+                            <input type="number" step="100">
+                        </div>
+                    </div>
+                </div>
+                <div class="discount">
+                    <input type="checkbox" id="discount-filter-checkbox">
+                    <label for="discount-filter-checkbox"><div></div><p>Только товары со скидками</p></label>
+                </div>
+                <button type="button" id="filters">Применить</button>
+            </form>
+        </aside>
+        <div class="content">
+            <div class="header">
+                <h2>Каталог</h2>
+                <form>
+                    <select name="sort" id="sort-select">
+                        <option value="rating_desc">По убыванию рейтинга</option>
+                        <option value="rating_asc">По возрастанию рейтинга</option>
+                        <option value="price_desc">По убыванию цены</option>
+                        <option value="price_asc">По возрастанию цены</option>
+                    </select>
+                </form>
+            </div>
+            <div class="container">
+                <!--<div class="item">
+                    <img src="https://edu.std-900.ist.mospolytech.ru/exam-2024-1/api/images/71v+9VoZYvL._AC_UL320_.jpg?api_key=2c4a9673-b944-41f1-9e6c-63b974458516">
+                    <div class="desc">
+                        <p class="name">
+                            Leosportz Weight Lifting Straps with Wrist Support...
+                            <span class="name-tooltip">
+                                Leosportz Weight Lifting Straps with Wrist Support - Wrist Straps for Weightlifting - Superior Deadlift Straps and Workout
+                            </span>
+                        </p>
+                        <div class="rating">
+                            <p>4,1</p>
+                            <div>
+                                <img src="sources/images/icons/star.png">
+                                <img src="sources/images/icons/star.png">
+                                <img src="sources/images/icons/star.png">
+                                <img src="sources/images/icons/star.png">
+                                <img src="sources/images/icons/star_empty.png">
+                            </div>
+                        </div>
+                        <div class="cost">
+                            <p>2000 &#8381;</p>
+                            <p><s>3000 &#8381;</s></p>
+                            <p>-33%</p>
+                        </div>
+                        <button>Добавить</button>
+                    </div>
+                </div>-->
+            </div>
+            <div>
+                <button id="load-more">Загрузить ещё</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&#169; 2025 NAME</p>
+    </footer>
+</body>
+</html>
